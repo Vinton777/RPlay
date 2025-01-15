@@ -1,0 +1,21 @@
+name: RPlay
+version: 1.0
+main: Vinton777.rPlay.RPlay
+api-version: 1.18
+commands:
+  me:
+    description: Локальное ролевое действие в радиусе 200 блоков
+  gme:
+    description: Глобальное ролевое действие
+  do:
+    description: Roleplay description
+  roll:
+    description: Random roll
+  try:
+    description: Try action
+  rplay:
+    description: Перезагружает конфигурацию плагина
+permissions:
+  rplay.reload:
+    description: Дает разрешение на перезагрузку конфигурации плагина
+    default: op

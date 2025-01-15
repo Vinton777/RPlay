@@ -1,0 +1,27 @@
+# Форматы сообщений
+global-prefix: "&6| &r{player}&8: &f{message}"
+local-prefix: "&6| &r{player}&8: &f{message}"
+do-format: "&b* {message} ({player})"
+roll-format: "&6{player} rolled a {result}"
+try-success-format: "&a{player} {message}: Удачно!"
+try-fail-format: "&a{player} {message}: Неудачно!"
+
+# Язык (ru или en)
+language: "ru"
+
+# Сообщения
+messages:
+  ru:
+    me: "{player}: {message}"
+    gme: "{player}: {message}"
+    do: "* {message} ({player})"
+    roll: "{player} выбросил {result}"
+    try-success: "{player} {message}: Удачно!"
+    try-fail: "{player} {message}: Неудачно!"
+  en:
+    me: "{player}: {message}"
+    gme: "{player}: {message}"
+    do: "* {message} ({player})"
+    roll: "{player} rolled a {result}"
+    try-success: "{player} {message}: Success!"
+    try-fail: "{player} {message}: Failed!"
