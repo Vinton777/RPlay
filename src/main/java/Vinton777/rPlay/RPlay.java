@@ -123,7 +123,17 @@ public class RPlay extends JavaPlugin {
                 int result = random.nextInt(max) + 1;
                 String formattedMessage = applyFormat("roll", player, null, result, false);
 
-                player.getServer().broadcastMessage(formattedMessage);
+                String rollSetting = config.getString("command-settings.roll", "global");
+                if (rollSetting.equalsIgnoreCase("local")) {
+                    double radius = config.getDouble("command-settings.roll-local-radius", 200);
+                    for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
+                        if (onlinePlayer.getWorld().equals(player.getWorld()) && onlinePlayer.getLocation().distance(player.getLocation()) <= radius) {
+                            onlinePlayer.sendMessage(formattedMessage);
+                        }
+                    }
+                } else {
+                    player.getServer().broadcastMessage(formattedMessage);
+                }
                 return true;
             }
             return false;
