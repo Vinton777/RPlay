@@ -19,7 +19,7 @@ import java.util.Random;
 public class RPlay extends JavaPlugin {
 
     private FileConfiguration config;
-    private static final String CURRENT_VERSION = "1.1.0"; // Текущая версия вашего плагина
+    private static final String CURRENT_VERSION = "1.2.0"; // Текущая версия вашего плагина
     private static final String UPDATE_URL = "https://api.github.com/repos/Vinton777/RPlay/releases/latest"; // URL для проверки обновлений
 
     @Override

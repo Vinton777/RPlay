@@ -9,6 +9,11 @@ try-fail-format: "{player} {message}: Неудачно!"
 # Язык (ru или en)
 language: "en"
 
+# Command settings
+command-setting:
+  roll: global # Возможные значения: global, local
+  roll-local-radius: 200 # Предел блоков для локальной команды roll
+
 # Сообщения
 messages:
   ru:
