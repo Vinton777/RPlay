@@ -1,0 +1,17 @@
+name: RPlay
+version: 2.0.0
+main: org.example.Main
+api-version: 1.19
+folia-supported: true
+
+commands:
+  me:
+  gme:
+  do:
+  roll:
+  try:
+  rplay:
+
+permissions:
+  rplay.reload:
+    default: op

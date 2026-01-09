@@ -1,0 +1,37 @@
+language: ru
+
+radius:
+  local: 200
+
+command-setting:
+  roll: global        # global | local
+  roll-local-radius: 200
+
+formats:
+  me: "<gold>|</gold> <white>{player}</white> <gray>{message}</gray>"
+  gme: "<gold>|</gold> <white>{player}</white> <gray>{message}</gray>"
+  do: "<light_purple>* {message} ({player})</light_purple>"
+  roll: "<gold>{player}</gold> {roll_text} <yellow>{result}</yellow>"
+  try-success: "<green>{player} {message}: {try_success}</green>"
+  try-fail: "<red>{player} {message}: {try_fail}</red>"
+
+messages:
+  ru:
+    reload: "<green>Конфигурация плагина успешно перезагружена</green>"
+    no-permission: "<red>У вас нет прав на эту команду</red>"
+    only-player: "<red>Эту команду может использовать только игрок</red>"
+    usage-roll: "<yellow>Использование: /roll [максимум]</yellow>"
+
+    roll-text: "выбросил"
+    try-success-text: "Удачно!"
+    try-fail-text: "Неудачно!"
+
+  en:
+    reload: "<green>Plugin configuration successfully reloaded</green>"
+    no-permission: "<red>You do not have permission to use this command</red>"
+    only-player: "<red>This command can only be used by a player</red>"
+    usage-roll: "<yellow>Usage: /roll [max]</yellow>"
+
+    roll-text: "rolled"
+    try-success-text: "Success!"
+    try-fail-text: "Failed!"
