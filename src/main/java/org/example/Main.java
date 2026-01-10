@@ -15,7 +15,7 @@ public final class Main extends JavaPlugin {
         Platform platform = PlatformDetector.detect(this);
         ConfigManager config = new ConfigManager(this);
 
-        ChatProvider chat = new VanillaChatProvider(platform.scheduler());
+        ChatProvider chat = new VanillaChatProvider();
 
         getCommand("me").setExecutor(new MeCommand(chat, config));
         getCommand("gme").setExecutor(new GMeCommand(chat, config));

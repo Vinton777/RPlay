@@ -21,6 +21,8 @@ messages:
     no-permission: "<red>У вас нет прав на эту команду</red>"
     only-player: "<red>Эту команду может использовать только игрок</red>"
     usage-roll: "<yellow>Использование: /roll [максимум]</yellow>"
+    usage-rplay: "<yellow>Использование: /rplay reload</yellow>"
+
 
     roll-text: "выбросил"
     try-success-text: "Удачно!"
@@ -31,6 +33,8 @@ messages:
     no-permission: "<red>You do not have permission to use this command</red>"
     only-player: "<red>This command can only be used by a player</red>"
     usage-roll: "<yellow>Usage: /roll [max]</yellow>"
+    usage-rplay: "<yellow>Usage: /rplay reload</yellow>"
+
 
     roll-text: "rolled"
     try-success-text: "Success!"
