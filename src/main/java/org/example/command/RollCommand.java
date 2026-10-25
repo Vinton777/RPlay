@@ -33,7 +33,12 @@ public class RollCommand implements CommandExecutor {
             }
         }
 
-        int result = ThreadLocalRandom.current().nextInt(1, max + 1);
+        if (max < 1) {
+            p.sendMessage(cfg.message("usage-roll"));
+            return true;
+        }
+
+        int result = ThreadLocalRandom.current().nextInt(max) + 1;
 
         Component msg = cfg.format("roll", Map.of(
                 "player", p.getName(),

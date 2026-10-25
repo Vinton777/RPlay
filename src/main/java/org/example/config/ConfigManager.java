@@ -2,6 +2,8 @@ package org.example.config;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
+import net.kyori.adventure.text.minimessage.tag.resolver.Placeholder;
+import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Map;
@@ -25,10 +27,13 @@ public class ConfigManager {
 
     public Component format(String key, Map<String, String> values) {
         String raw = plugin.getConfig().getString("formats." + key, "");
+        TagResolver.Builder placeholders = TagResolver.builder();
         for (var e : values.entrySet()) {
-            raw = raw.replace("{" + e.getKey() + "}", e.getValue());
+            String tag = "rplay_" + e.getKey().replace('-', '_');
+            raw = raw.replace("{" + e.getKey() + "}", "<" + tag + ">");
+            placeholders.resolver(Placeholder.unparsed(tag, e.getValue()));
         }
-        return mm.deserialize(raw);
+        return mm.deserialize(raw, placeholders.build());
     }
 
     /* ===== Messages ===== */
